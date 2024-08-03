@@ -1,0 +1,1536 @@
+body {
+  margin: 0;
+  padding: 0;
+  /* background-image: url('/internship_rf_st/assets/images/apcob_logo.jpeg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover; Ensures the image covers the entire viewport */
+}
+#print-element{
+  margin-top: 120px;
+}
+/* Heading Styles */
+.heading {
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-top: 2%;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+
+.heading h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.heading input[type="number"] {
+  border: 1px solid #ddd;
+  font-weight: 600;
+  padding: 3px;
+  font-size: 15px;
+  width: auto;
+  text-align: center;
+  margin: 0 5px;
+}
+
+.heading input[type="number"]::-webkit-inner-spin-button,
+.heading input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.heading input[type="number"]:focus {
+  outline: none;
+  border-color: #4caf50;
+}
+
+/* Table Styles */
+.drawal-details {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.drawal-details table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 10px 0;
+  font-size: 18px;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.drawal-details table th,
+.drawal-details table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+}
+
+.drawal-details table th {
+  background-color: #f2f2f2;
+}
+
+.drawal-details table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.drawal-details table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.drawal-details label {
+  font-weight: bold;
+}
+
+/* Responsive Table Design */
+@media (max-width: 992px) {
+  .drawal-details table,
+  .drawal-details table thead,
+  .drawal-details table tbody,
+  .drawal-details table th,
+  .drawal-details table td,
+  .drawal-details table tr {
+    display: block;
+  }
+
+  .drawal-details table thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  .drawal-details table tr {
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+  }
+
+  .drawal-details table td {
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+    text-align: right;
+  }
+
+  .drawal-details table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    width: 50%;
+    padding-left: 15px;
+    font-weight: bold;
+    text-align: left;
+  }
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.drawal-details table {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Side Heading Styles */
+.side-heading {
+  font-size: 24px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  margin: 20px 0;
+  padding: 10px 15px;
+  background-color: #f2f2f2;
+  border: 1px solid #ddd;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.side-heading .units {
+  font-size: 16px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+/* Responsive Side Heading */
+@media (max-width: 992px) {
+  .side-heading {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 768px) {
+  .side-heading {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .side-heading {
+    font-size: 18px;
+  }
+}
+
+/* Input Styles */
+input[type="number"] {
+  border: 1px solid #ddd;
+  font-weight: 600;
+  border: none;
+  padding: 3px;
+  font-size: 15px;
+  width: auto;
+  text-align: center;
+  margin: 0 5px;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"]:focus {
+  outline: none;
+  border-color: #4caf50;
+}
+
+/* Styles for the additional floating rate input fields */
+#floating-rate-inputs {
+  margin-top: 10px; /* Add margin to separate from the main input */
+}
+
+#floating-rate-inputs input {
+  margin-right: 10px; /* Add space between the input fields */
+  padding: 5px; /* Add padding for better appearance */
+  font-size: 15px; /* Ensure consistent font size */
+  border: 1px solid #ddd; /* Add border */
+  border-radius: 4px; /* Rounded corners */
+  width: calc(50% - 15px); /* Adjust width to fit two inputs side by side with margin */
+  box-sizing: border-box; /* Ensure padding and border are included in the width */
+}
+
+.drawal-details {
+  margin-bottom: 5px; /* Adjust the margin at the bottom of the first table */
+}
+
+.side-heading {
+  margin-top: 0; /* Reset the top margin of the side heading */
+  margin-bottom: 20px; /* Add margin at the bottom of the side heading */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  #floating-rate-inputs input {
+    width: 100%; /* Full width on small screens */
+    margin-bottom: 10px; /* Space below each input */
+  }
+}
+
+.units {
+  font-size: 14px;
+  font-weight: normal;
+  margin-left: 10px;
+}
+/* Styling for reset frequency row */
+#reset-frequency-row {
+  display: table-row; /* Ensure the row is displayed as a table row */
+  background-color: #f2f2f2; /* Light gray background */
+  border-bottom: 1px solid #ddd; /* Bottom border */
+  padding: 10px; /* Padding for spacing */
+}
+
+#reset-frequency-row td {
+  padding: 10px; /* Padding for cells */
+}
+
+#reset-date {
+  font-size: 16px; /* Font size for the reset date information */
+  line-height: 1.6; /* Line height for better spacing */
+}
+
+#reset-date div {
+  margin-top: 5px; /* Margin between each reset date */
+}
+
+#reset-date div:before {
+  font-weight: bold; /* Bold bullet point */
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em; /* Adjust to align bullet points properly */
+}
+
+#date1,
+#date2,
+#date3,
+#date4,
+#date5 {
+  display: inline-block;
+}
+/*total-os table styling*/
+.total-os {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.total-os .side-heading {
+  font-size: 24px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  margin-bottom: 10px;
+  padding: 10px 15px;
+  background-color: #f2f2f2;
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.total-os .units {
+  font-size: 16px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.total-os table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 10px 0;
+  font-size: 18px;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.total-os table th,
+.total-os table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+}
+
+.total-os table th {
+  background-color: #f2f2f2;
+}
+
+.total-os table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.total-os table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.total-os input[type="number"] {
+  border: 1px solid #ddd;
+  font-weight: 600;
+  padding: 3px;
+  font-size: 15px;
+  width: auto;
+  text-align: center;
+  margin: 0 5px;
+  margin-bottom: 10px;
+}
+
+.total-os input[type="number"]::-webkit-inner-spin-button,
+.total-os input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.total-os input[type="number"]:focus {
+  outline: none;
+  border-color: #4caf50;
+}
+
+/* Responsive Table Design */
+@media (max-width: 992px) {
+  .total-os table,
+  .total-os table thead,
+  .total-os table tbody,
+  .total-os table th,
+  .total-os table td,
+  .total-os table tr {
+    display: block;
+  }
+
+  .total-os table thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  .total-os table tr {
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+  }
+
+  .total-os table td {
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+    text-align: right;
+  }
+
+  .total-os table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    width: 50%;
+    padding-left: 15px;
+    font-weight: bold;
+    text-align: left;
+  }
+}
+.total-os table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+}
+
+.total-os table td:nth-child(3) {
+  width: 15%; /* Adjust the width as needed */
+}
+/*mlt table styling*/
+.mlt {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.mlt .side-heading {
+  font-size: 24px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  margin-bottom: 10px;
+  padding: 10px 15px;
+  background-color: #f2f2f2;
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mlt .units {
+  font-size: 16px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.mlt table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 10px 0;
+  font-size: 18px;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.mlt table th,
+.mlt table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+}
+
+.mlt table th {
+  background-color: #f2f2f2;
+}
+
+.mlt table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.mlt table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.mlt input[type="number"] {
+  border: 1px solid #ddd;
+  font-weight: 600;
+  padding: 3px;
+  font-size: 15px;
+  width: auto;
+  text-align: center;
+  margin: 0 5px;
+  margin-bottom: 10px;
+}
+
+.mlt input[type="number"]::-webkit-inner-spin-button,
+.mlt input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.mlt input[type="number"]:focus {
+  outline: none;
+  border-color: #4caf50;
+}
+
+/* Responsive Table Design */
+@media (max-width: 992px) {
+  .mlt table,
+  .mlt table thead,
+  .mlt table tbody,
+  .mlt table th,
+  .mlt table td,
+  .mlt table tr {
+    display: block;
+  }
+
+  .mlt table thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  .mlt table tr {
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+  }
+
+  .mlt table td {
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+    text-align: right;
+  }
+
+  .mlt table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    width: 50%;
+    padding-left: 15px;
+    font-weight: bold;
+    text-align: left;
+  }
+}
+.mlt table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+}
+.mlt table td:nth-child(1) {
+  width: 5%; /* Adjust the width as needed */
+}
+
+.mlt table td:nth-child(3) {
+  width: 15%; /* Adjust the width as needed */
+}
+/*nios table styling*/
+.nios {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.nios .side-heading {
+  font-size: 24px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  margin-bottom: 10px;
+  padding: 10px 15px;
+  background-color: #f2f2f2;
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nios .units {
+  font-size: 16px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.nios table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 10px 0;
+  font-size: 18px;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.nios table th,
+.nios table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+}
+
+.nios table th {
+  background-color: #f2f2f2;
+}
+
+.nios table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.nios table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.nios input[type="number"] {
+  border: 1px solid #ddd;
+  font-weight: 600;
+  padding: 3px;
+  font-size: 15px;
+  width: auto;
+  text-align: center;
+  margin: 0 5px;
+  margin-bottom: 10px;
+}
+
+.nios input[type="number"]::-webkit-inner-spin-button,
+.nios input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.nios input[type="number"]:focus {
+  outline: none;
+  border-color: #4caf50;
+}
+
+/* Responsive Table Design */
+@media (max-width: 992px) {
+  .nios table,
+  .nios table thead,
+  .nios table tbody,
+  .nios table th,
+  .nios table td,
+  .nios table tr {
+    display: block;
+  }
+
+  .nios table thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  .nios table tr {
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+  }
+
+  .nios table td {
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+    text-align: right;
+  }
+
+  .nios table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    width: 50%;
+    padding-left: 15px;
+    font-weight: bold;
+    text-align: left;
+  }
+}
+.nios table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+}
+.nios table td:nth-child(1) {
+  width: 5%; /* Adjust the width as needed */
+}
+
+.nios table td:nth-child(3) {
+  width: 15%; /* Adjust the width as needed */
+}
+/*md table styling*/
+.md {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.md .side-heading {
+  font-size: 24px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  margin-bottom: 10px;
+  padding: 10px 15px;
+  background-color: #f2f2f2;
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.md .units {
+  font-size: 16px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.md table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 10px 0;
+  font-size: 18px;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.md table th,
+.md table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+}
+
+.md table th {
+  background-color: #f2f2f2;
+}
+
+.md table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.md table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.md input[type="number"] {
+  border: 1px solid #ddd;
+  font-weight: 600;
+  padding: 3px;
+  font-size: 15px;
+  width: auto;
+  text-align: center;
+  margin: 0 5px;
+  margin-bottom: 10px;
+}
+
+.md input[type="number"]::-webkit-inner-spin-button,
+.md input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.md input[type="number"]:focus {
+  outline: none;
+  border-color: #4caf50;
+}
+
+/* Responsive Table Design */
+@media (max-width: 992px) {
+  .md table,
+  .md table thead,
+  .md table tbody,
+  .md table th,
+  .md table td,
+  .md table tr {
+    display: block;
+  }
+
+  .md table thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  .md table tr {
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+  }
+
+  .md table td {
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+    text-align: right;
+  }
+
+  .md table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    width: 50%;
+    padding-left: 15px;
+    font-weight: bold;
+    text-align: left;
+  }
+}
+.md table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+}
+.md table td:nth-child(1) {
+  width: 5%; /* Adjust the width as needed */
+}
+
+.md table td:nth-child(3) {
+  width: 15%; /* Adjust the width as needed */
+}
+/*mnodc table styling*/
+.mnodc {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.mnodc .side-heading {
+  font-size: 24px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  margin-bottom: 10px;
+  padding: 10px 15px;
+  background-color: #f2f2f2;
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mnodc .units {
+  font-size: 16px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.mnodc table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 10px 0;
+  font-size: 18px;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.mnodc table th,
+.mnodc table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+}
+
+.mnodc table th {
+  background-color: #f2f2f2;
+}
+
+.mnodc table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.mnodc table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.mnodc input[type="number"] {
+  border: 1px solid #ddd;
+  font-weight: 600;
+  padding: 3px;
+  font-size: 15px;
+  width: auto;
+  text-align: center;
+  margin: 0 5px;
+  margin-bottom: 10px;
+}
+
+.mnodc input[type="number"]::-webkit-inner-spin-button,
+.mnodc input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.mnodc input[type="number"]:focus {
+  outline: none;
+  border-color: #4caf50;
+}
+
+/* Responsive Table Design */
+@media (max-width: 992px) {
+
+  .mnodc table,
+  .mnodc table thead,
+  .mnodc table tbody,
+  .mnodc table th,
+  .mnodc table td,
+  .mnodc table tr {
+      display: block;
+  }
+
+  .mnodc table thead tr {
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+  }
+
+  .mnodc table tr {
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
+  }
+
+  .mnodc table td {
+      border: none;
+      border-bottom: 1px solid #eee;
+      position: relative;
+      padding-left: 50%;
+      text-align: right;
+  }
+
+  .mnodc table td::before {
+      content: attr(data-label);
+      position: absolute;
+      left: 0;
+      width: 50%;
+      padding-left: 15px;
+      font-weight: bold;
+      text-align: left;
+  }
+}
+
+.mnodc table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+}
+
+.mnodc table td:nth-child(1) {
+  width: 5%;
+  /* Adjust the width as needed */
+}
+
+.mnodc table td:nth-child(3) {
+  width: 15%;
+  /* Adjust the width as needed */
+}
+/*nodcos table styling*/
+.nodcos {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.nodcos .side-heading {
+  font-size: 24px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  margin-bottom: 10px;
+  padding: 10px 15px;
+  background-color: #f2f2f2;
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nodcos .units {
+  font-size: 16px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.nodcos table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 10px 0;
+  font-size: 18px;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.nodcos table th,
+.nodcos table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+}
+
+.nodcos table th {
+  background-color: #f2f2f2;
+}
+
+.nodcos table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.nodcos table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.nodcos input[type="number"] {
+  border: 1px solid #ddd;
+  font-weight: 600;
+  padding: 3px;
+  font-size: 15px;
+  width: auto;
+  text-align: center;
+  margin: 0 5px;
+  margin-bottom: 10px;
+}
+
+.nodcos input[type="number"]::-webkit-inner-spin-button,
+.nodcos input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.nodcos input[type="number"]:focus {
+  outline: none;
+  border-color: #4caf50;
+}
+
+/* Responsive Table Design */
+@media (max-width: 992px) {
+
+  .nodcos table,
+  .nodcos table thead,
+  .nodcos table tbody,
+  .nodcos table th,
+  .nodcos table td,
+  .nodcos table tr {
+      display: block;
+  }
+
+  .nodcos table thead tr {
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+  }
+
+  .nodcos table tr {
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
+  }
+
+  .nodcos table td {
+      border: none;
+      border-bottom: 1px solid #eee;
+      position: relative;
+      padding-left: 50%;
+      text-align: right;
+  }
+
+  .nodcos table td::before {
+      content: attr(data-label);
+      position: absolute;
+      left: 0;
+      width: 50%;
+      padding-left: 15px;
+      font-weight: bold;
+      text-align: left;
+  }
+}
+
+.nodcos table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+}
+
+.nodcos table td:nth-child(1) {
+  width: 5%;
+  /* Adjust the width as needed */
+}
+
+.nodcos table td:nth-child(3) {
+  width: 15%;
+  /* Adjust the width as needed */
+}
+/*details sao*/
+.detasao {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  border-radius: 10px;
+  margin-bottom: 0px;
+  margin-left: 3px;
+  color: #0b0a0a;
+  font-weight: bold;
+  padding-top: 0px;
+}
+
+.detasao p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #0b0a0a;
+  margin-bottom: 0px;
+}
+
+ .detasao,  .required {
+  font-weight: bold;
+  color: #555;
+  display: inline-block;
+  padding-top: 0px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .detasao p {
+    margin-bottom: 5px;
+  }
+}
+/*eligibility table styling*/
+.eligibility {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.eligibility .side-heading {
+  font-size: 24px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  margin-bottom: 10px;
+  padding: 10px 15px;
+  background-color: #f2f2f2;
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.eligibility .units {
+  font-size: 16px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.eligibility table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 10px 0;
+  font-size: 18px;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.eligibility table th,
+.eligibility table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+}
+
+.eligibility table th {
+  background-color: #f2f2f2;
+}
+
+.eligibility table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.eligibility table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.eligibility input[type="number"] {
+  border: 1px solid #ddd;
+  font-weight: 600;
+  padding: 3px;
+  font-size: 15px;
+  width: auto;
+  text-align: center;
+  margin: 0 5px;
+  margin-bottom: 10px;
+}
+
+.eligibility input[type="number"]::-webkit-inner-spin-button,
+.eligibility input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.eligibility input[type="number"]:focus {
+  outline: none;
+  border-color: #4caf50;
+}
+
+/* Responsive Table Design */
+@media (max-width: 992px) {
+
+  .eligibility table,
+  .eligibility table thead,
+  .eligibility table tbody,
+  .eligibility table th,
+  .eligibility table td,
+  .eligibility table tr {
+      display: block;
+  }
+
+  .eligibility table thead tr {
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+  }
+
+  .eligibility table tr {
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
+  }
+
+  .eligibility table td {
+      border: none;
+      border-bottom: 1px solid #eee;
+      position: relative;
+      padding-left: 50%;
+      text-align: right;
+  }
+
+  .eligibility table td::before {
+      content: attr(data-label);
+      position: absolute;
+      left: 0;
+      width: 50%;
+      padding-left: 15px;
+      font-weight: bold;
+      text-align: left;
+  }
+}
+
+.eligibility table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+}
+
+.eligibility table td:nth-child(1) {
+  width: 5%;
+  /* Adjust the width as needed */
+}
+
+.eligibility table td:nth-child(3) {
+  width: 25%;
+  /* Adjust the width as needed */
+}
+/*risk table style*/
+.risktable {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.risktable .side-heading {
+  font-size: 24px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  margin-bottom: 10px;
+  padding: 10px 15px;
+  background-color: #f2f2f2;
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.risktable table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 10px 0;
+  font-size: 18px;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.risktable table th,
+.risktable table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+}
+
+.risktable table th {
+  background-color: #f2f2f2;
+}
+
+.risktable table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.risktable table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.risktable input[type="number"] {
+  border: 1px solid #ddd;
+  font-weight: 600;
+  padding: 3px;
+  font-size: 15px;
+  width: auto;
+  text-align: center;
+  margin: 0 5px;
+  margin-bottom: 10px;
+}
+
+.risktable input[type="number"]::-webkit-inner-spin-button,
+.risktable input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.risktable input[type="number"]:focus {
+  outline: none;
+  border-color: #4caf50;
+}
+
+/* Responsive Table Design */
+@media (max-width: 992px) {
+
+  .risktable table,
+  .risktable table thead,
+  .risktable table tbody,
+  .risktable table th,
+  .risktable table td,
+  .risktable table tr {
+      display: block;
+  }
+
+  .risktable table thead tr {
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+  }
+
+  .risktable table tr {
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
+  }
+
+  .risktable table td {
+      border: none;
+      border-bottom: 1px solid #eee;
+      position: relative;
+      padding-left: 50%;
+      text-align: right;
+  }
+
+  .risktable table td::before {
+      content: attr(data-label);
+      position: absolute;
+      left: 0;
+      width: 50%;
+      padding-left: 15px;
+      font-weight: bold;
+      text-align: left;
+  }
+}
+
+.risktable table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+}
+
+.risktable table td:nth-child(1) {
+  width: 40%;
+  /* Adjust the width as needed */
+}
+
+
+
+/*roitable table styling*/
+.roitable {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.roitable .side-heading {
+  font-size: 24px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  margin-bottom: 10px;
+  padding: 10px 15px;
+  background-color: #f2f2f2;
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.roitable .units {
+  font-size: 16px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.roitable table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 10px 0;
+  font-size: 18px;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.roitable table th,
+.roitable table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+}
+
+.roitable table th {
+  background-color: #f2f2f2;
+}
+
+.roitable table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.roitable table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.roitable input[type="number"] {
+  border: 1px solid #ddd;
+  font-weight: 600;
+  padding: 3px;
+  font-size: 15px;
+  width: auto;
+  text-align: center;
+  margin: 0 5px;
+  margin-bottom: 10px;
+}
+
+.roitable input[type="number"]::-webkit-inner-spin-button,
+.roitable input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.roitable input[type="number"]:focus {
+  outline: none;
+  border-color: #4caf50;
+}
+
+/* Responsive Table Design */
+@media (max-width: 992px) {
+  .roitable table,
+  .roitable table thead,
+  .roitable table tbody,
+  .roitable table th,
+  .roitable table td,
+  .roitable table tr {
+    display: block;
+  }
+
+  .roitable table thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  .roitable table tr {
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+  }
+
+  .roitable table td {
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+    text-align: right;
+  }
+
+  .roitable table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    width: 50%;
+    padding-left: 15px;
+    font-weight: bold;
+    text-align: left;
+  }
+}
+.roitable table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+}
+.roitable table td:nth-child(1) {
+  width: 40%; /* Adjust the width as needed */
+}
+
+
+
+/*result sao*/
+.result {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  border-radius: 10px;
+  margin-bottom: 0px;
+  margin-left: 3px;
+  color: #0b0a0a;
+  font-weight: bold;
+  padding-top: 0px;
+}
+
+.result p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #0b0a0a;
+  margin-bottom: 0px;
+}
+
+ .result,  .required {
+  font-weight: bold;
+  color: #555;
+  display: inline-block;
+  padding-top: 0px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .result p {
+    margin-bottom: 5px;
+  }
+}
+#download-pdf{
+  margin-bottom:80px;
+}
+#download-pdf {
+  background-color: #4CAF50; /* Green background */
+  color: white; /* White text */
+  border: none; /* No border */
+  padding: 10px 20px; /* Padding inside the button */
+  text-align: center; /* Center text */
+  text-decoration: none; /* Remove underline from text */
+  display: inline-block; /* Display as inline-block */
+  font-size: 16px; /* Font size */
+  margin-top: 50px; /* Margin space at the top */
+  cursor: pointer; /* Cursor style on hover */
+  border-radius: 5px; /* Rounded corners */
+}
+#print-button{
+  width:100%;
+  height:70px;
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+#download-pdf:hover {
+  background-color: #45a049; /* Darker green when hovering */
+}
+#finda {
+  /* Add your custom styles here */
+  width: 150px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 15px;
+  color: #333;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#finda:focus {
+  border-color: #66afe9;
+  box-shadow: 0 0 5px rgba(102, 175, 233, 0.6);
+  outline: none;
+}
+
+#finda:hover {
+  border-color: #999;
+}

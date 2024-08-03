@@ -1,0 +1,1193 @@
+body {
+  margin: 0;
+  padding: 0;
+  /* background-image: url('/internship_rf_st/assets/images/apcob_logo.jpeg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed; */
+  /* background-size: cover; Ensures the image covers the entire viewport */
+}
+
+/* Styling for reset frequency row */
+#reset-frequency-row {
+  display: table-row; /* Ensure the row is displayed as a table row */
+  background-color: #f2f2f2; /* Light gray background */
+  border-bottom: 1px solid #ddd; /* Bottom border */
+  padding: 10px; /* Padding for spacing */
+}
+
+#reset-frequency-row td {
+  padding: 10px; /* Padding for cells */
+}
+#reset-date {
+  font-size: 16px; /* Font size for the reset date information */
+  line-height: 1.6; /* Line height for better spacing */
+}
+
+#reset-date div {
+  margin-top: 5px; /* Margin between each reset date */
+}
+#reset-date div:before {
+  font-weight: bold; /* Bold bullet point */
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em; /* Adjust to align bullet points properly */
+}
+
+#date1, #date2,#date3,#date4,#date5{
+  display:inline-block;
+}
+/* Heading Styles */
+.heading {
+  margin-left:2%;
+  margin-right:2%;
+  margin-top:2%;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+#print-element{
+  margin-top: 120px;
+}
+.heading h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.heading input[type="number"] {
+  border: 1px solid #ddd;
+  font-weight: 600;
+  border: none;
+  padding: 3px;
+  font-size: 15px;
+  width: auto;
+  text-align: center;
+  margin: 0 5px;
+}
+
+.heading input[type="number"]::-webkit-inner-spin-button,
+.heading input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.heading input[type="number"]:focus {
+  outline: none;
+  border-color: #4caf50;
+}
+
+/* Table Styles */
+.drawal-details {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.drawal-details table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 10px 0;
+  font-size: 18px;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.drawal-details table th,
+.drawal-details table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+}
+
+.drawal-details table th {
+  background-color: #f2f2f2;
+}
+
+.drawal-details table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.drawal-details table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.drawal-details label {
+  font-weight: bold;
+}
+
+/* Responsive Table Design */
+@media (max-width: 992px) {
+  .drawal-details table,
+  .drawal-details table thead,
+  .drawal-details table tbody,
+  .drawal-details table th,
+  .drawal-details table td,
+  .drawal-details table tr {
+    display: block;
+  }
+
+  .drawal-details table thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  .drawal-details table tr {
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+  }
+
+  .drawal-details table td {
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+    text-align: right;
+  }
+
+  .drawal-details table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    width: 50%;
+    padding-left: 15px;
+    font-weight: bold;
+    text-align: left;
+  }
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.drawal-details table {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Side Heading Styles */
+.side-heading {
+  font-size: 24px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  margin: 20px 0;
+  padding: 10px 15px;
+  background-color: #f2f2f2;
+  border: 1px solid #ddd;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.side-heading .units {
+  font-size: 16px;
+  font-weight: bold; /* Update font weight */
+  margin-left: 10px;
+}
+
+/* Responsive Side Heading */
+@media (max-width: 992px) {
+  .side-heading {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 768px) {
+  .side-heading {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .side-heading {
+    font-size: 18px;
+  }
+}
+
+/* Input Styles */
+input[type="number"] {
+  border: 1px solid #ddd;
+  font-weight: 600;
+  border: none;
+  padding: 3px;
+  font-size: 15px;
+  width: auto;
+  text-align: center;
+  margin: 0 5px;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"]:focus {
+  outline: none;
+  border-color: #4caf50;
+}
+
+/* Styles for the additional floating rate input fields */
+#floating-rate-inputs {
+  margin-top: 10px; /* Add margin to separate from the main input */
+}
+
+#floating-rate-inputs input {
+  margin-right: 10px; /* Add space between the input fields */
+  padding: 5px; /* Add padding for better appearance */
+  font-size: 15px; /* Ensure consistent font size */
+  border: 1px solid #ddd; /* Add border */
+  border-radius: 4px; /* Rounded corners */
+  width: calc(
+    50% - 15px
+  ); /* Adjust width to fit two inputs side by side with margin */
+  box-sizing: border-box; /* Ensure padding and border are included in the width */
+}
+
+.drawal-details {
+  margin-bottom: 5px; /* Adjust the margin at the bottom of the first table */
+}
+
+.side-heading {
+  margin-top: 0; /* Reset the top margin of the side heading */
+  margin-bottom: 20px; /* Add margin at the bottom of the side heading */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  #floating-rate-inputs input {
+    width: 100%; /* Full width on small screens */
+    margin-bottom: 10px; /* Space below each input */
+  }
+}
+.units {
+  font-size: 14px;
+  font-weight: normal;
+  margin-left: 10px;
+  font: weight 100;
+}
+/* Margin in Limit Table Styles */
+.margin-limit {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.margin-limit table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 18px;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.margin-limit table th,
+.margin-limit table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+}
+
+.margin-limit table th {
+  background-color: #f2f2f2;
+}
+
+.margin-limit table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.margin-limit table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.margin-limit label {
+  font-weight: bold;
+}
+input {
+  margin-bottom: 2px;
+}
+.margin-limit table tr:nth-child(2) td input {
+  padding: 5px 10px; /* Adjust padding */
+  margin: 5px; /* Add margin */
+  width: calc(100% - 20px); /* Adjust width relative to column */
+}
+
+.margin-limit table tr:nth-child(2) td input[type="number"] {
+  width: auto; /* Allow the input field to adjust width based on content */
+}
+/* Margin in NODC Table Styles */
+.margin-nodc {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-bottom: 5px; /* Add margin at the bottom */
+}
+
+.margin-nodc table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px auto; /* Center the table horizontally */
+  font-size: 18px;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.margin-nodc table th,
+.margin-nodc table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+}
+
+.margin-nodc table th {
+  background-color: #f2f2f2;
+}
+
+.margin-nodc table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.margin-nodc table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.margin-nodc label {
+  font-weight: bold;
+}
+.margin-nodc table tr:nth-child(2) td input {
+  padding: 5px 10px; /* Adjust padding */
+  margin: 5px; /* Add margin */
+  width: calc(100% - 20px); /* Adjust width relative to column */
+}
+
+.margin-nodc table tr:nth-child(2) td input[type="number"] {
+  width: auto; /* Allow the input field to adjust width based on content */
+}
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .margin-nodc table,
+  .margin-nodc table thead,
+  .margin-nodc table tbody,
+  .margin-nodc table th,
+  .margin-nodc table td,
+  .margin-nodc table tr {
+    display: block;
+  }
+
+  .margin-nodc table thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  .margin-nodc table tr {
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+  }
+
+  .margin-nodc table td {
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+    text-align: right;
+  }
+
+  .margin-nodc table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    width: 50%;
+    padding-left: 15px;
+    font-weight: bold;
+    text-align: left;
+  }
+}
+/* Data Table Styles */
+.data {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.data table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 18px;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.data table th,
+.data table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+}
+
+.data table th {
+  background-color: #f2f2f2;
+}
+
+.data table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.data table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.data label {
+  font-weight: bold;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .data table,
+  .data table thead,
+  .data table tbody,
+  .data table th,
+  .data table td,
+  .data table tr {
+    display: block;
+  }
+
+  .data table thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  .data table tr {
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+  }
+
+  .data table td {
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+    text-align: right;
+  }
+
+  .data table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    width: 50%;
+    padding-left: 15px;
+    font-weight: bold;
+    text-align: left;
+  }
+}
+.notation {
+  text-align: center;
+}
+/* Styles for the .data2 table */
+.data2 {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.data2 table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 18px;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.data2 table th,
+.data2 table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+}
+
+.data2 table th {
+  background-color: #f2f2f2;
+}
+
+.data2 table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.data2 table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.data2 label {
+  font-weight: bold;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .data2 table,
+  .data2 table thead,
+  .data2 table tbody,
+  .data2 table th,
+  .data2 table td,
+  .data2 table tr {
+    display: block;
+  }
+
+  .data2 table thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  .data2 table tr {
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+  }
+
+  .data2 table td {
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+    text-align: right;
+  }
+
+  .data2 table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    width: 50%;
+    padding-left: 15px;
+    font-weight: bold;
+    text-align: left;
+  }
+}
+/* Styles for the .data2 table */
+.data2 {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.data2 table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 18px;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.data2 table th,
+.data2 table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+}
+
+.data2 table th {
+  background-color: #f2f2f2;
+}
+
+.data2 table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.data2 table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.data2 label {
+  font-weight: bold;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .data2 table,
+  .data2 table thead,
+  .data2 table tbody,
+  .data2 table th,
+  .data2 table td,
+  .data2 table tr {
+    display: block;
+  }
+
+  .data2 table thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  .data2 table tr {
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+  }
+
+  .data2 table td {
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+    text-align: right;
+  }
+
+  .data2 table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    width: 50%;
+    padding-left: 15px;
+    font-weight: bold;
+    text-align: left;
+  }
+}
+/* Margin in NODC - Through Table Styles */
+.margin-through {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-bottom: 5px; /* Add margin at the bottom */
+}
+
+.margin-through table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px auto; /* Center the table horizontally */
+  font-size: 18px;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.margin-through table th,
+.margin-through table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+}
+
+.margin-through table th {
+  background-color: #f2f2f2;
+}
+
+.margin-through table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.margin-through table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.margin-through label {
+  font-weight: bold;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .margin-through table,
+  .margin-through table thead,
+  .margin-through table tbody,
+  .margin-through table th,
+  .margin-through table td,
+  .margin-through table tr {
+    display: block;
+  }
+
+  .margin-through table thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  .margin-through table tr {
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+  }
+
+  .margin-through table td {
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+    text-align: right;
+  }
+
+  .margin-through table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    width: 50%;
+    padding-left: 15px;
+    font-weight: bold;
+    text-align: left;
+  }
+}
+/* Disbursements Styles */
+.disbursements {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  border-radius: 10px;
+  /* box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.1); */
+  margin-left: 3px;
+  padding-top: 0px;
+  color: #0b0a0a;
+}
+
+#financial-year-start{
+  margin-bottom: 6px;
+  margin-left:0px;
+  width:40px;
+  height:10px;
+}
+.disbursements p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #0b0a0a;
+  margin-bottom: 10px;
+  padding-top:0px;
+  margin-top:0px;
+}
+#disburse5{
+  line-height: 40px;
+  font-weight: 550;
+}
+
+.disbursements label {
+  font-weight: bold;
+  margin-right: 5px;
+  color: #555;
+}
+
+.disbursements input[type="number"] {
+  border: 1px solid #ddd;
+  padding: 10px 15px;
+  font-size: 16px;
+  width: 150px;
+  margin-right: 10px;
+  border-radius: 5px;
+  background-color: #f5f5f5;
+  transition: border-color 0.3s ease;
+}
+
+.disbursements input[type="number"]:focus {
+  outline: none;
+  border-color: #4caf50;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .disbursements input[type="number"] {
+    width: 100%; /* Adjust width for smaller screens */
+    margin-right: 0; /* Remove right margin */
+    margin-bottom: 10px; /* Add bottom margin */
+  }
+}
+.details {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  /* box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.1); */
+  margin-left: 3px;
+  padding-top: 0px;
+  color: #0b0a0a;
+  font-weight: 550;
+}
+
+.details p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #0b0a0a;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  margin:0px;
+}
+
+.details .branch {
+  font-weight: bold;
+  color: #555;
+}
+
+.details .required {
+  font-weight: bold;
+  color: #555;
+}
+
+.details .category {
+  font-weight: bold;
+  color: #555;
+}
+.checking {
+  width: 100%;
+  padding: 20px;
+  padding-top:0px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  margin-left: 3px;
+  color: #0b0a0a;
+  font-weight: bold;
+}
+
+.checking p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #0b0a0a;
+  margin-bottom: 10px;
+}
+
+.checking ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.checking li {
+  margin-bottom: 10px;
+}
+.checking li div {
+  font-weight: bold;
+  color: #555;
+  display:inline-block;
+  padding-top:0px;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+.checking{
+  padding-bottom: 10px;
+  margin-bottom: 0px;
+}
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .checking li {
+    margin-bottom: 5px;
+  }
+}
+.result {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  border-radius: 10px;
+  margin-bottom: 0px;
+  margin-left: 3px;
+  color: #0b0a0a;
+  font-weight: bold;
+  padding-top: 0px;
+}
+
+.result p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #0b0a0a;
+  margin-bottom: 0px;
+}
+
+ .mnodcp7,  .required {
+  font-weight: bold;
+  color: #555;
+  display: inline-block;
+  padding-top: 0px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .result p {
+    margin-bottom: 5px;
+  }
+}
+
+.confirmation {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  margin-left: 3px;
+  color: #0b0a0a;
+  font-weight: bold;
+  margin-top:0px;
+  padding-top:0px;
+}
+
+.confirmation p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #0b0a0a;
+  margin-bottom: 10px;
+  margin-top:0px;
+}
+
+.confirmation .required, 
+.confirmation .branch, 
+.confirmation .category, 
+.confirmation #type, 
+.confirmation #type-value, 
+.confirmation #way {
+  font-weight: bold;
+  color: #555;
+  display: inline-block;
+  padding-top: 0px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .confirmation p {
+    margin-bottom: 5px;
+  }
+}
+
+/* Table Styles */
+.margin-disbursements {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  border-radius: 10px;
+  color: #0b0a0a;
+}
+
+.margin-disbursements table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 18px;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.margin-disbursements table th,
+.margin-disbursements table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+}
+
+.margin-disbursements table th {
+  background-color: #f2f2f2;
+}
+
+.margin-disbursements table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.margin-disbursements table tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Input Styles */
+.margin-disbursements input[type="number"] {
+  border: 1px solid #ddd;
+  padding: 10px 15px;
+  font-size: 16px;
+  width: 150px;
+  border-radius: 5px;
+  background-color: #f5f5f5;
+  transition: border-color 0.3s ease;
+}
+
+.margin-disbursements input[type="number"]:focus {
+  outline: none;
+  border-color: #4caf50;
+}
+
+/* Side Heading Styles */
+.margin-disbursements .side-heading {
+  font-size: 24px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  margin: 20px 0;
+  padding: 10px 15px;
+  background-color: #f2f2f2;
+  border: 1px solid #ddd;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.margin-disbursements .side-heading .units {
+  font-size: 16px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .margin-disbursements .side-heading {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 768px) {
+  .margin-disbursements .side-heading {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .margin-disbursements .side-heading {
+    font-size: 18px;
+  }
+
+  .margin-disbursements input[type="number"] {
+    width: 100%; /* Adjust width for smaller screens */
+    margin-right: 0; /* Remove right margin */
+    margin-bottom: 10px; /* Add bottom margin */
+  }
+}
+
+
+/* Table Styles */
+.margin-dis-through {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  border-radius: 10px;
+  color: #0b0a0a;
+}
+
+.margin-dis-through table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 18px;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.margin-dis-through table th,
+.margin-dis-through table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+}
+
+.margin-dis-through table th {
+  background-color: #f2f2f2;
+}
+
+.margin-dis-through table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.margin-dis-through table tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Input Styles */
+.margin-dis-through input[type="number"] {
+  border: 1px solid #ddd;
+  padding: 10px 15px;
+  font-size: 16px;
+  width: 150px;
+  border-radius: 5px;
+  background-color: #f5f5f5;
+  transition: border-color 0.3s ease;
+}
+
+.margin-dis-through input[type="number"]:focus {
+  outline: none;
+  border-color: #4caf50;
+}
+
+/* Side Heading Styles */
+.margin-dis-through .side-heading {
+  font-size: 24px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  margin: 20px 0;
+  padding: 10px 15px;
+  background-color: #f2f2f2;
+  border: 1px solid #ddd;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.margin-dis-through .side-heading .units {
+  font-size: 16px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .margin-dis-through .side-heading {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 768px) {
+  .margin-dis-through .side-heading {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .margin-dis-through .side-heading {
+    font-size: 18px;
+  }
+
+  .margin-dis-through input[type="number"] {
+    width: 100%; /* Adjust width for smaller screens */
+    margin-right: 0; /* Remove right margin */
+    margin-bottom: 10px; /* Add bottom margin */
+  }
+}
+#download-pdf{
+  margin-bottom:50px;
+}
+#download-pdf {
+  background-color: #4CAF50; /* Green background */
+  color: white; /* White text */
+  border: none; /* No border */
+  padding: 10px 20px; /* Padding inside the button */
+  text-align: center; /* Center text */
+  text-decoration: none; /* Remove underline from text */
+  display: inline-block; /* Display as inline-block */
+  font-size: 16px; /* Font size */
+  margin-top: 10px; /* Margin space at the top */
+  cursor: pointer; /* Cursor style on hover */
+  border-radius: 5px; /* Rounded corners */
+}
+#print-button{
+  width:100%;
+  height:70px;
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+#download-pdf:hover {
+  background-color: #45a049; /* Darker green when hovering */
+}
+#finda {
+  /* Add your custom styles here */
+  width: 150px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 15px;
+  color: #333;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#finda:focus {
+  border-color: #66afe9;
+  box-shadow: 0 0 5px rgba(102, 175, 233, 0.6);
+  outline: none;
+}
+
+#finda:hover {
+  border-color: #999;
+}
