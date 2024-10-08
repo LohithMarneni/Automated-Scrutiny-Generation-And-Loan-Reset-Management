@@ -1,0 +1,111 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  background-color: #f8f9fa; 
+  padding: 15px; 
+  border-bottom: 2px solid green;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px;
+  padding-right: 15px;
+  position: fixed; /* Fixes the navbar to the top */
+  top: 0; /* Aligns it to the top of the viewport */
+  left: 0; /* Aligns it to the left of the viewport */
+  width: 100%; /* Ensures it spans the full width */
+  z-index: 1000; /* Ensures it is above other content */
+}
+
+.navbar-brand {
+  display: flex; 
+  align-items: center;
+  text-decoration: none;
+}
+
+#nav_logo {
+  margin-right: 15px;
+}
+
+.navbar-text {
+  font-weight: 600; 
+  margin-left: 20px; 
+  font-size: 25px; 
+  color: #155724;
+}
+
+.dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-toggle {
+  background-color: transparent; 
+  border: none;
+  cursor: pointer;
+  display: flex; 
+  align-items: center; 
+}
+
+.dropdown-toggle .user-icon {
+  border-radius: 50%; 
+  margin-right: 10px;
+  width: 40px; /* Adjusted for better fit */
+  height: 40px; /* Adjusted for better fit */
+  transition: transform 0.3s ease;
+}
+
+.dropdown-toggle:hover .user-icon {
+  transform: scale(1.1);
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  width: 160px; /* Adjusted width */
+  z-index: 1000;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-right: 7px;
+}
+
+.dropdown-menu.show {
+  display: block;
+}
+
+.dropdown-header {
+  padding: 15px 20px;
+  background-color: #d4edda;
+  color: #155724;
+  font-weight: bold;
+  border-bottom: 1px solid #ccc;
+}
+
+.dropdown-item {
+  padding: 15px 20px;
+  text-decoration: none;
+  color: #155724;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-item:hover {
+  background-color: #c3e6cb; 
+  color: #155724;
+}
+
+.dropdown-item:focus, .dropdown-item:active {
+  background-color: #c3e6cb;
+}
+
+

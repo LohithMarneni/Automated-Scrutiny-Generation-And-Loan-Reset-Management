@@ -1,0 +1,18 @@
+
+.footer {
+    background-color: #4CAF50; /* Light gray background */
+    padding: 20px 0; /* Padding at the top and bottom */
+    position: fixed; /* Fixed position */
+    bottom: 0; /* Stick to the bottom */
+    width: 100%; /* Full width */
+    text-align: center; /* Center-align text */
+    color: #fff; /* White text color */
+  }
+  .footer p {
+    margin: 0;
+  }
+  /* Container within footer */
+  .footer .container {
+    max-width: 960px; /* Limit container width */
+    margin: 0 auto; /* Center-align container */
+  }
